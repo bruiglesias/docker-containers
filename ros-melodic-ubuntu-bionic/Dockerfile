@@ -48,5 +48,7 @@ RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd ~/ros_workspace; catkin_make
 
 WORKDIR ${HOME}/ros_workspace/ 
 
+COPY --chown=${USER} ./src/ ./src/
+
 # REMOVENDO ARQUIVOS DESNECESSÁRIOS
-# RUN sudo apt-get -y autoremove && sudo rm -rf /var/lib/apt/lists/* 
+RUN sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* 

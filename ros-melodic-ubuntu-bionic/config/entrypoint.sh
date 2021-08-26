@@ -1,4 +1,5 @@
 #!/bin/bash
+# Esse arquivo nao está sendo usado
 set -e 
 # setup environment
 source $HOME/.bashrc 
